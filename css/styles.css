@@ -6,6 +6,27 @@
   --grey-emphasis: #808080;
   /* Font families*/
   --font-body: "Inter", sans-serif;
+  /* Font sizes */
+  --headline-1-fs: 4.6rem;
+  --headline-2-fs: 4.8rem;
+  --headline-3-fs: 3.7rem;
+  --headline-4-fs: 2.8rem;
+  --headline-5-fs: 2.5rem;
+  --body-1-and-button-fs: 1.8rem;
+  --body-2-fs: 1.6rem;
+  --caption-fs: 1.2rem;
+  /* Line heights */
+  --headline-1-lh: 5.6rem;
+  --headline-2-lh: 5.8rem;
+  --headline-3-lh: 3.15rem;
+  --headline-4-lh: 3.389rem;
+  --headline-5-lh: 3.0236rem;
+  --body-1-lh: 2.7rem;
+  --body-2-and-caption-lh: 2.2rem;
+  /* Font weights */
+  --ultra-bold-fw: 800;
+  --bold-fw: 700;
+  --normal-fw: 400;
 }
 
 html {
@@ -13,71 +34,144 @@ html {
   font-family: var(--font-body);
 }
 
+/* COMPOSITION */
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
 /* UTILITIES  */
-
-.ultra-bold {
-  font-weight: 800;
-}
-
-.bold {
-  font-weight: 700;
-}
-
-.headline-1 {
-  font-size: 4.6rem;
-  line-height: 5.6rem;
-}
-
-.headline-2 {
-  font-size: 4.8rem;
-  line-height: 5.8rem;
-}
-
-.headline-3 {
-  font-size: 3.7rem;
-  line-height: 3.15rem;
-}
-
-.headline-4 {
-  font-size: 2.8rem;
-  line-height: 3.389rem;
-}
-
-.headline-5 {
-  font-size: 2.5rem;
-  line-height: 3.0236rem;
-}
-
-.body-1 {
-  font-size: 1.8rem;
-  line-height: 2.7rem;
-}
-
-.body-2 {
-  font-size: 1.6rem;
-  line-height: 2.2rem;
-}
-
-.caption {
-  font-size: 1.2rem;
-  line-height: 2.2rem;
-}
 
 [hidden] {
   display: none;
 }
 
 /* BLOCK  */
+
+/* header block  */
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 2.4rem 2rem;
   height: 8rem;
   background-color: var(--black-bg);
   color: var(--grey-emphasis);
 }
 
+.header h2 {
+  font-size: var(--headline-5-fs);
+  color: var(--white-bg);
+}
+
+.header ul[role="menu"] {
+  font-size: var(--body-1-and-button-fs);
+  line-height: var(--body-1-lh);
+}
+
+/* hamburger block */
 .hamburger {
-  width: 2.8rem;
-  height: 2.8rem;
+  padding: 5px 5px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: var(--white-bg);
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+.hamburger:hover {
+  opacity: 0.7;
+}
+.hamburger.is-active:hover {
+  opacity: 0.7;
+}
+/* Configuración de las líneas del hamburger button  */
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: var(--white-bg);
+}
+
+.hamburger-box {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+/* Dibujar las líneas del hamburger button */
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  width: 100%;
+  height: 4px;
+  background-color: var(--white-bg);
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: "";
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/* main block  */
+
+.main {
+  --flow-space: 2.4rem;
+  padding: 3.4rem 2.4rem 30.8rem;
+  background-image: url(../img/images/background-0.5x.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main h1 {
+  font-size: var(--headline-4-fs);
+  line-height: var(--headline-4-lh);
+  color: var(--white-bg);
+}
+
+.main h2 {
+  font-size: var(--body-2-fs);
+  line-height: var(--body-2-and-caption-lh);
+  color: var(--grey-emphasis);
+  font-weight: var(--normal-fw);
+}
+
+/* cta-button block  */
+.cta-button {
+  padding: 1.2rem;
+  min-width: 26rem;
+  font-size: var(--body-1-and-button-fs);
+  line-height: var(--body-1-lh);
+  font-weight: var(--bold-fw);
+  background-color: transparent;
+  color: var(--white-bg);
+  border: 2px solid var(--white-bg);
+  border-radius: 8px;
 }
