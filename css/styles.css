@@ -58,6 +58,12 @@ html {
   display: none;
 }
 
+/* .card-grid {
+  display: grid;
+  grid-template-rows: repeat(2, 5rem) minmax(39rem, 50rem);
+  min-height: 49rem;
+} */
+
 /* BLOCK  */
 
 /* header block  */
@@ -356,6 +362,64 @@ html {
   margin-right: auto;
 }
 
+.testimonials {
+  background-color: var(--grey-bg);
+  padding: 8rem 2rem 20rem;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: var(--headline-5-fs);
+  line-height: var(--headline-5-lh);
+  margin-bottom: 8rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 0 3.2rem 3.2rem;
+  height: 100%;
+  text-align: center;
+  box-shadow: 0 4px 4.4rem rgba(0, 0, 0, 0.1);
+  background-color: var(--white-bg);
+  border-radius: 8px;
+}
+
+.card-container {
+  --flow-space: 8rem;
+  --grid-column-quantity: 1;
+  --gap-space: 14rem;
+  --grid-max-width: minmax(30rem, 42.6rem);
+  padding-top: 5rem;
+}
+
+.card img {
+  height: 10rem;
+  border-radius: 50%;
+  margin: -5rem auto 7.5rem;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6rem;
+  height: 100%;
+}
+
+.card p {
+  font-size: var(--body-1-and-button-fs);
+  line-height: var(--body-1-lh);
+}
+
+.card div p:nth-child(1) {
+  font-weight: bold;
+}
+
+.card div p:nth-child(2) {
+  color: var(--grey-emphasis);
+}
+
 @media (min-width: 425px) {
   .sellers .news-container {
     --grid-column-quantity: 2;
@@ -365,5 +429,15 @@ html {
 @media (min-width: 768px) {
   .sellers .news-container {
     --grid-column-quantity: 4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-container {
+    --flow-space: 0;
+    --grid-column-quantity: 3;
+    --gap-space: 2.4rem;
+    --grid-max-width: minmax(32rem, 42.6rem);
+    padding-top: 5rem;
   }
 }
