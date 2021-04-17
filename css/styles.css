@@ -2,6 +2,7 @@
   /*Colors*/
   --black-bg: #000000;
   --white-bg: #ffffff;
+  --grey-bg: #e8e8e6;
   --green-emphasis: #2fb464;
   --grey-emphasis: #808080;
   /* Font families*/
@@ -38,6 +39,17 @@ html {
 
 .flow > * + * {
   margin-top: var(--flow-space, 1em);
+}
+
+.flexible-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    var(--grid-column-quantity),
+    var(--grid-max-width)
+  );
+  gap: var(--gap-space);
+  place-items: center;
+  place-content: center;
 }
 
 /* UTILITIES  */
@@ -178,26 +190,180 @@ html {
 }
 
 .video-container {
-  position: absolute;
-  margin-top: 5.7rem;
+  position: relative;
+  margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(../img/images/phone.png);
   width: 26.4rem;
   height: 50.3rem;
+  background-image: url(../img/images/phone.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.video {
+.sellers .video-container {
+  margin-top: -25.15rem;
+}
+
+.video-container video {
   position: absolute;
   top: 7.1rem;
   left: 3rem;
-  background-image: url(../img/images/video.gif);
   width: 20.2rem;
   height: 35.5rem;
-  background-position: center;
+}
+
+.video-container .play-button {
+  position: absolute;
+  top: calc(50% - (5.3rem / 2));
+  left: calc(50% - (5.3rem / 2));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.3rem;
+  height: 5.3rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.video-container .play-button .play-icon {
+  width: 0;
+  height: 0;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  border-left: 2rem solid rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+}
+
+.sellers .news-container {
+  --grid-column-quantity: 1;
+  --gap-space: 2.4rem;
+  --grid-max-width: 15rem;
+  margin: 2.4rem auto 6.4rem;
+  max-width: 56.3rem;
+}
+
+.sellers .feature {
+  --flow-space: 6.4rem;
+  background: var(--grey-bg);
+  padding-bottom: 6.4rem;
+}
+
+.sellers .feature article {
+  padding: 0 2rem;
+}
+
+.sellers .feature article h2 {
+  font-size: var(--headline-5-fs);
+  line-height: var(--headline-5-lh);
+}
+
+.sellers .feature article p {
+  margin-top: 1.6rem;
+  font-size: var(--body-2-fs);
+  line-height: var(--body-2-and-caption-lh);
+  color: var(--grey-emphasis);
+}
+
+.sellers .feature .video-container {
+  margin-top: 6.4rem;
+}
+
+.purchase {
+  padding: 0 2rem 13.8rem;
+  background-color: var(--grey-bg);
+  background-image: url(../img/images/plant.png);
+  background-position: bottom -3.2rem right -25rem;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 466%;
+}
+
+.purchase section {
+  --flow-space: 1.6rem;
+}
+
+.purchase h2 {
+  font-size: var(--headline-5-fs);
+  line-height: var(--headline-5-lh);
+}
+
+.purchase p {
+  font-size: var(--body-2-fs);
+  line-height: var(--body-2-and-caption-lh);
+  color: var(--grey-emphasis);
+}
+
+.purchase .video-container {
+  margin-top: 6.4rem;
+}
+
+.tracking {
+  padding: 6.4rem 0;
+  background: var(--black-bg);
+  color: var(--white-bg);
+}
+
+.tracking section {
+  --flow-space: 2.4rem;
+  padding: 0 2rem;
+}
+.tracking h2 {
+  font-size: var(--headline-5-fs);
+  line-height: var(--headline-5-lh);
+}
+
+.tracking p {
+  font-size: var(--body-2-fs);
+  line-height: var(--body-2-and-caption-lh);
+}
+
+.bar {
+  margin: 4rem 0 6.4rem 2rem;
+  height: 4rem;
+  background-color: var(--grey-bg);
+  border-radius: 2rem 0 0 2rem;
+}
+
+.progress {
+  height: 100%;
+  width: 60.35%;
+  background-color: var(--green-emphasis);
+  border-radius: 2rem;
+}
+
+.login {
+  --flow-space: 5.6rem;
+  padding: 6.4rem 2rem;
+}
+
+.login section {
+  --flow-space: 2.4rem;
+}
+
+.login h2 {
+  font-size: var(--headline-5-fs);
+  line-height: var(--headline-5-lh);
+}
+
+.login p {
+  font-size: var(--body-2-fs);
+  line-height: var(--body-2-and-caption-lh);
+}
+
+.login img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 425px) {
+  .sellers .news-container {
+    --grid-column-quantity: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .sellers .news-container {
+    --grid-column-quantity: 4;
+  }
 }
