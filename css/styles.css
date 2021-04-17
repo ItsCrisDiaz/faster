@@ -399,14 +399,6 @@ html {
   margin: -5rem auto 7.5rem;
 }
 
-.card-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 6rem;
-  height: 100%;
-}
-
 .card p {
   font-size: var(--body-1-and-button-fs);
   line-height: var(--body-1-lh);
@@ -418,6 +410,56 @@ html {
 
 .card div p:nth-child(2) {
   color: var(--grey-emphasis);
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6rem;
+  height: 100%;
+}
+
+footer {
+  padding: 20rem 2rem 12.8rem;
+  background-color: var(--black-bg);
+  color: white;
+}
+
+footer article {
+  --flow-space: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: -30rem 0 9.5rem;
+  padding: 2.4rem 3.2rem;
+  background-color: var(--white-bg);
+  color: var(--black-bg);
+  border-radius: 8px;
+}
+
+footer article h2 {
+  font-size: var(--headline-5-fs);
+  line-height: var(--headline-5-lh);
+}
+
+footer article p {
+  font-size: var(--body-2-fs);
+  line-height: var(--body-2-and-caption-lh);
+  color: var(--grey-emphasis);
+}
+
+footer article div {
+  --flow-space: 1.2rem;
+}
+
+/* EXCEPTIONS */
+
+.cta-button[data-reverse="true"] {
+  width: clamp(26rem, 100%, 30rem);
+  background-color: var(--black-bg);
+  border: 2px solid var(--black-bg);
 }
 
 @media (min-width: 425px) {
