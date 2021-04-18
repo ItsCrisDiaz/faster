@@ -58,12 +58,6 @@ html {
   display: none;
 }
 
-/* .card-grid {
-  display: grid;
-  grid-template-rows: repeat(2, 5rem) minmax(39rem, 50rem);
-  min-height: 49rem;
-} */
-
 /* BLOCK  */
 
 /* header block  */
@@ -77,7 +71,8 @@ html {
   color: var(--grey-emphasis);
 }
 
-.header h2 {
+.header h2,
+.social-media h2 {
   font-size: var(--headline-5-fs);
   color: var(--white-bg);
 }
@@ -421,6 +416,7 @@ html {
 }
 
 footer {
+  --flow-space: 6.4rem;
   padding: 20rem 2rem 12.8rem;
   background-color: var(--black-bg);
   color: white;
@@ -454,6 +450,66 @@ footer article div {
   --flow-space: 1.2rem;
 }
 
+.social-media {
+  --flow-space: 0.4rem;
+}
+
+.social-media h3 {
+  font-size: var(--caption-fs);
+  line-height: var(--body-2-and-caption-lh);
+  color: var(--grey-emphasis);
+}
+
+.social-media i {
+  display: inline-block;
+  width: 3.6rem;
+  height: 3.6rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.social-media div {
+  padding-top: 2.4rem;
+}
+
+.social-media div > * + * {
+  margin-left: 1.6rem;
+}
+
+.twitter {
+  background-image: url(../img/icons/twitter.png);
+}
+
+.instagram {
+  background-image: url(../img/icons/instagram.png);
+}
+
+.linkedin {
+  background-image: url(../img/icons/linkedin.png);
+}
+
+.links {
+  --flow-space: 1rem;
+  margin-top: 6.4rem;
+}
+
+.links h2 {
+  font-size: var(--body-1-and-button-fs);
+  line-height: var(--body-1-and-button-fs);
+}
+
+.links ul {
+  padding-left: 0;
+}
+
+.links li {
+  font-size: var(--body-1-and-button-fs);
+  line-height: var(--body-1-lh);
+  color: var(--grey-emphasis);
+}
+
 /* EXCEPTIONS */
 
 .cta-button[data-reverse="true"] {
@@ -472,14 +528,24 @@ footer article div {
   .sellers .news-container {
     --grid-column-quantity: 4;
   }
+
+  .card-container {
+    --grid-column-quantity: 2;
+    --gap-space: 2.4rem;
+    --grid-max-width: minmax(32rem, 42.6rem);
+    row-gap: 8rem;
+    padding-top: 5rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .card-container {
     --flow-space: 0;
-    --grid-column-quantity: 3;
+    --grid-column-quantity: 4;
     --gap-space: 2.4rem;
-    --grid-max-width: minmax(32rem, 42.6rem);
+    --grid-max-width: 42.6rem;
     padding-top: 5rem;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
   }
 }
