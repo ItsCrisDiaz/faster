@@ -30,110 +30,125 @@
         </span>
       </button>
     </header>
-    <main class="main | flow">
-      <h1 class="headline-4 bold">
-        One click. No passwords. The world's fastest checkout.
-      </h1>
-      <h2 class="body-2 normal">
-        Forget passwords. Skip long entry forms. Shop online and securely check
-        out with a single click. It’s safe, easy, and yep, fast.
-      </h2>
-      <button class="cta-button">Sign up for Fast</button>
-    </main>
-    <section class="sellers">
-      <div class="video-container">
+    <main class="main| flexible-grid">
+      <div class="video-container | hide-mobile">
         <video src="./video/faster-video.mp4" type="/video/mp4"></video>
         <div class="play-button">
           <div class="play-icon"></div>
         </div>
       </div>
-      <section class="news-container | flexible-grid">
-        <picture>
-          <img src="./img/icons/cnn.png" alt="Logo de CNN" />
-        </picture>
-        <picture>
-          <img src="./img/icons/reuters.png" alt="Logo de Reuters" />
-        </picture>
-        <picture>
-          <img src="./img/icons/forbes.png" alt="Logo de Forbes" />
-        </picture>
-        <picture>
-          <img src="./img/icons/vogue.png" alt="Logo de Vogue" />
-        </picture>
-      </section>
-      <section class="feature | flow">
-        <picture>
-          <source
-            srcset="./img/images/man-with-cellphone-2x.png"
-            media="(min-width: 768px)"
-          />
-          <img
-            src="./img/images/man-with-cellphone.png"
-            alt="Hombre con teléfono"
-          />
-        </picture>
-        <article class="flow">
-          <h2>Check out faster than you can say “Fast Checkout”</h2>
+      <section class="main-feature | flow">
+        <section class="feature-container | flow">
+          <h1>
+            One click.<br />No passwords.<br />The world's fastest checkout.
+          </h1>
           <p>
-            No more resetting passwords or painstakingly typing in your billing
-            and shipping address. Join people in 35 countries who are checking
-            out with Faster.
+            Forget passwords. Skip long entry forms. Shop online and securely
+            check out with a single click. It’s safe, easy, and yep, fast.
           </p>
-        </article>
-        <div class="video-container">
+        </section>
+        <section class="cta | flow">
+          <button class="cta-button">Sign up for Fast</button>
+          <a href="#">Get fast for your business</a>
+        </section>
+      </section>
+      <section class="news-container">
+        <div class="video-container | hide-desktop">
+          <video src="./video/faster-video.mp4" type="/video/mp4"></video>
+          <div class="play-button">
+            <div class="play-icon"></div>
+          </div>
+        </div>
+        <section class="flexible-grid">
+          <picture>
+            <img src="./img/icons/cnn.png" alt="Logo de CNN" />
+          </picture>
+          <picture>
+            <img src="./img/icons/reuters.png" alt="Logo de Reuters" />
+          </picture>
+          <picture>
+            <img src="./img/icons/forbes.png" alt="Logo de Forbes" />
+          </picture>
+          <picture>
+            <img src="./img/icons/vogue.png" alt="Logo de Vogue" />
+          </picture>
+        </section>
+      </section>
+      <section class="sellers">
+        <section class="feature | flow | wrapper">
+          <picture>
+            <source
+              srcset="./img/images/man-with-cellphone-2x.png"
+              media="(min-width: 768px)"
+            />
+            <img
+              src="./img/images/man-with-cellphone.png"
+              alt="Hombre con teléfono"
+            />
+          </picture>
+          <article class="feature-container | flow">
+            <h2>Check out faster than you can say “Fast Checkout”</h2>
+            <p>
+              No more resetting passwords or painstakingly typing in your
+              billing and shipping address. Join people in 35 countries who are
+              checking out with Faster.
+            </p>
+          </article>
+          <div class="video-container | hide-desktop">
+            <video src="./video/faster-video.mp4" type="/video/mp4"></video>
+            <div class="play-button">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="purchase | flow">
+        <section class="feature-container | flow">
+          <h2>All your purchases in one place</h2>
+          <p>
+            Manage all your Fast transactions in a single dashboard. Track
+            shipments, handle returns, and reorder items — all with one click.
+          </p>
+          <div class="video-container | hide-desktop">
+            <video src="./video/faster-video.mp4" type="/video/mp4"></video>
+            <div class="play-button">
+              <div class="play-icon"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="tracking">
+        <section class="feature-container | flow">
+          <h2>The easiest way to track packages</h2>
+          <p>
+            Package tracking is all over the place, so we’re fixing that. Fast
+            Tracking lets you easily see when all your items will show up.
+          </p>
+        </section>
+        <div class="bar">
+          <div class="progress"></div>
+        </div>
+        <div class="video-container | hide-desktop">
           <video src="./video/faster-video.mp4" type="/video/mp4"></video>
           <div class="play-button">
             <div class="play-icon"></div>
           </div>
         </div>
       </section>
-    </section>
-    <section class="purchase | flow">
-      <section class="flow">
-        <h2>All your purchases in one place</h2>
-        <p>
-          Manage all your Fast transactions in a single dashboard. Track
-          shipments, handle returns, and reorder items — all with one click.
-        </p>
-        <div class="video-container">
-          <video src="./video/faster-video.mp4" type="/video/mp4"></video>
-          <div class="play-button">
-            <div class="play-icon"></div>
-          </div>
-        </div>
+      <section class="login | flow">
+        <section class="feature-container | flow">
+          <h2>Less logging in, more checking out</h2>
+          <p>
+            No more unique logins or pAsSw0rds! With one click, Fast lets you
+            securely log in, check out, and get on with your day.
+          </p>
+        </section>
+        <img
+          src="./img/images/login-girl.png"
+          alt="Picture of girl with glasses smiling"
+        />
       </section>
-    </section>
-    <section class="tracking">
-      <section class="flow">
-        <h2>The easiest way to track packages</h2>
-        <p>
-          Package tracking is all over the place, so we’re fixing that. Fast
-          Tracking lets you easily see when all your items will show up.
-        </p>
-      </section>
-      <div class="bar">
-        <div class="progress"></div>
-      </div>
-      <div class="video-container">
-        <video src="./video/faster-video.mp4" type="/video/mp4"></video>
-        <div class="play-button">
-          <div class="play-icon"></div>
-        </div>
-      </div>
-    </section>
-    <section class="login | flow">
-      <section class="flow">
-        <h2>Less logging in, more checking out</h2>
-        <p>
-          No more unique logins or pAsSw0rds! With one click, Fast lets you
-          securely log in, check out, and get on with your day.
-        </p>
-      </section>
-      <img
-        src="./img/images/login-girl.png"
-        alt="Picture of girl with glasses smiling"
-      />
-    </section>
+    </main>
     <section class="testimonials | flow">
       <h2>Folks are checking out Fast</h2>
       <section class="card-container | flexible-grid">
@@ -217,9 +232,9 @@
         <h2>FASTER</h2>
         <h3>2021 Fast AF, Inc.</h3>
         <div>
-          <i class="twitter"></i>
-          <i class="instagram"></i>
-          <i class="linkedin"></i>
+          <span class="twitter"></span>
+          <span class="instagram"></span>
+          <span class="linkedin"></span>
         </div>
       </section>
       <section class="links | flow">
