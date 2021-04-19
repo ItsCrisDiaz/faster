@@ -596,13 +596,12 @@ footer article div {
   }
 
   .video-container.hide-mobile {
-    /* --container-multiplier: 1.2; */
     position: sticky;
     top: 2rem;
     left: 2rem;
-    max-width: 40rem;
-    margin-block-end: 2rem;
     display: block;
+    margin-block-start: 40rem;
+    margin-block-end: 2rem;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
   }
@@ -702,8 +701,15 @@ footer article div {
   }
 }
 
-@media (min-width: 1376px) {
+@media (min-width: 1280px) {
+  .video-container.hide-mobile {
+    --container-multiplier: 1.2;
+  }
   .main-feature {
     background-image: url(../img/images/background.png);
+  }
+
+  .news-container {
+    padding-left: 0;
   }
 }
