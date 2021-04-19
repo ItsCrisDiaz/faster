@@ -158,9 +158,9 @@ body {
   bottom: -10px;
 }
 
-.main {
+/* .main {
   width: 100vw;
-}
+} */
 
 /* main block  */
 
@@ -592,6 +592,7 @@ footer article div {
   .main {
     display: grid;
     grid-template-columns: 30% 70%;
+    width: 100%;
   }
 
   .video-container.hide-mobile {
