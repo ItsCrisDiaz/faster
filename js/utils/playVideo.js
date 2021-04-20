@@ -1,4 +1,4 @@
-const VIDEO_PLAYER = [...document.querySelectorAll(".video-container")];
+const VIDEO_PLAYER = document.querySelectorAll(".video-container");
 
 const videoPlayFunction = function (element) {
   let fasterVideo = element.querySelector("video");
