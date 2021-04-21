@@ -6,7 +6,6 @@
   --green-emphasis: #2fb464;
   --grey-emphasis: #808080;
   --scrollbarBG: #cfd8dc;
-  --thumbBG: #90a4ae;
   /* Font families*/
   --font-body: "Inter", sans-serif;
   /* Font sizes */
@@ -52,7 +51,7 @@ body {
   background: var(--scrollbarBG);
 }
 *::-webkit-scrollbar-thumb {
-  background-color: var(--thumbBG);
+  background-color: var(--grey-emphasis);
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
 }
@@ -75,6 +74,10 @@ body {
 }
 
 /* UTILITIES  */
+
+.pointer {
+  cursor: pointer;
+}
 
 /* BLOCK  */
 
@@ -125,7 +128,7 @@ body {
   display: block;
   transform: scaleX(1);
   transform-origin: bottom right;
-  transition: transform 0.2s ease-out;
+  transition: transform 0.33s ease-out;
 }
 
 .header ul[role="menu"] {
@@ -134,7 +137,6 @@ body {
   width: 100%;
   height: calc(100vh - 8rem);
   background-color: #0d0d0d;
-  color: var(--white-bg);
   text-align: right;
   font-size: var(--body-1-and-button-fs);
   line-height: var(--body-1-lh);
@@ -144,6 +146,11 @@ body {
 .header li {
   position: relative;
   width: 100%;
+}
+
+.header a {
+  text-decoration: none;
+  color: var(--white-bg);
 }
 
 .header li::after {
@@ -677,6 +684,10 @@ footer article div {
     --grid-max-width: minmax(32rem, 42.6rem);
     row-gap: 8rem;
     padding-top: 5rem;
+    justify-content: start;
+    max-width: 180rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .social-media,
@@ -724,7 +735,6 @@ footer article div {
     width: 100%;
     height: inherit;
     background-color: transparent;
-    color: var(--white-bg);
   }
 
   .header li {
@@ -735,9 +745,10 @@ footer article div {
     width: auto;
     height: 100%;
     border-bottom: 3px solid transparent;
+  }
+
+  .header a {
     color: var(--grey-emphasis);
-    transition: border-bottom 0.3s ease-in;
-    transition: color 0.3s ease-in;
   }
   .header li::after {
     content: "";
@@ -745,10 +756,18 @@ footer article div {
     height: 0;
   }
 
-  .header li:hover {
+  .header li:hover a,
+  .header li a:hover {
     color: var(--white-bg);
-    border-bottom: 3px solid white;
   }
+
+  .header li:hover {
+    border-bottom: 3px solid var(--white-bg);
+  }
+
+  /* .header li a:hover {
+    color: var(--white-bg);
+  } */
 
   .main {
     display: grid;
@@ -853,12 +872,6 @@ footer article div {
 
   .links {
     margin-left: 12.8rem;
-  }
-
-  .sellers .feature .video-container,
-  .purchase .video-container,
-  .tracking .video-container {
-    display: none;
   }
 
   footer article {

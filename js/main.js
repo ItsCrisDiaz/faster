@@ -4,4 +4,6 @@ import { menuAnimation } from "./utils/menuAnimation.js";
 
 videoPlay();
 
-menuAnimation();
+if (window.matchMedia("(max-width: 1023px)")) {
+  menuAnimation();
+}
