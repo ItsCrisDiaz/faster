@@ -1,0 +1,53 @@
+@media (min-width: 768px) {
+  .news-container section {
+    --grid-column-quantity: 4;
+  }
+
+  .feature-container p {
+    font-size: var(--body-1-and-button-fs);
+    line-height: var(--body-1-lh);
+  }
+
+  .feature-container h1 {
+    font-size: var(--headline-1-fs);
+    line-height: var(--headline-1-lh);
+  }
+
+  .feature-container h2 {
+    font-size: var(--headline-2-fs);
+    line-height: var(--headline-2-lh);
+  }
+
+  .sellers .feature {
+    background-color: var(--white-bg);
+  }
+
+  .purchase {
+    padding-top: 2rem;
+    background-position: bottom right;
+    background-size: 80%;
+  }
+
+  .card-container {
+    --grid-column-quantity: 2;
+    --gap-space: 2.4rem;
+    --grid-max-width: minmax(32rem, 42.6rem);
+    row-gap: 8rem;
+    padding-top: 5rem;
+    justify-content: start;
+    max-width: 180rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .social-media,
+  .links {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .links {
+    margin-left: 5rem;
+  }
+}

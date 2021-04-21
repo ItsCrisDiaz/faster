@@ -1,0 +1,5 @@
+@media screen and (min-width: 425px) {
+  .news-container section {
+    --grid-column-quantity: 2;
+  }
+}
