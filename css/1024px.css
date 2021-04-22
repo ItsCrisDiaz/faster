@@ -70,10 +70,11 @@
   .video-container.hide-mobile {
     position: sticky;
     top: 2rem;
-    left: 2rem;
     display: block;
     margin-block-start: 25rem;
     margin-block-end: 2rem;
+    margin-left: calc(90% - ((26.4rem * var(--container-multiplier))));
+    margin-right: 0;
     grid-column: 1 / 2;
     grid-row: 1 / 3;
   }
